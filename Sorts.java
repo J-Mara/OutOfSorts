@@ -26,4 +26,17 @@ public class Sorts{
       data[lowest] = holder;
     }
   }
+  public static void insertionSort(int[] data){
+    for(int i = 0; i < data.length; i++){
+      for(int j = 0; j < i; j++){
+        if(data[i] < data[j]){
+          int holder = data[i];
+          for(int p = i-1; p >= j; p--){
+            data[p+1] = data[p];
+          }
+          data[j] = holder;
+        }
+      }
+    }
+  }
 }
